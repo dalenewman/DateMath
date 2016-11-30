@@ -1,0 +1,16 @@
+{
+  "title": "Date Math",
+  "copyright": "Dale Newman © 2016",
+  "description": "Elasticsearch date math in .NET",
+  "language": "en-US",
+  "version": "0.0.1-*",
+
+  "dependencies": {
+    "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
+    "NETStandard.Library": "1.6.0"
+  },
+
+  "frameworks": {
+    "netstandard1.0": {}
+  }
+}
