@@ -23,12 +23,15 @@ namespace dalenewman {
 
     public static class DateMath {
 
+        private const string AnchorDatePattern = @"^now|.{6,}\|\|";
+        private const string OperatorPattern = @"[/+/-]{1}\d+[yMwdhHms]{1}";
+
 #if NS10
-        private static readonly Regex AnchorDate = new Regex(@"^now|.{6,}\|\|");
-        private static readonly Regex Operator = new Regex(@"[/+/-]{1}\d+[yMwdhHms]{1}");
+        private static readonly Regex AnchorDate = new Regex(AnchorDatePattern);
+        private static readonly Regex Operator = new Regex(OperatorPattern);
 #else
-        private static readonly Regex AnchorDate = new Regex(@"^now|.{6,}\|\|", RegexOptions.Compiled);
-        private static readonly Regex Operator = new Regex(@"[/+/-]{1}\d+[yMwdhHms]{1}", RegexOptions.Compiled);
+        private static readonly Regex AnchorDate = new Regex(AnchorDatePattern, RegexOptions.Compiled);
+        private static readonly Regex Operator = new Regex(OperatorPattern, RegexOptions.Compiled);
 #endif
 
         public static string Parse(string expression, string format) {
