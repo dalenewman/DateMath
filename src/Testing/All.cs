@@ -136,5 +136,14 @@ namespace Testing {
             Assert.AreEqual(expected.ToString(FormatWithTime), actual.ToString(FormatWithTime));
         }
 
+        [TestMethod]
+        public void TestReadMe() {
+            const string input = "2016-12-31 1 PM||";
+            Assert.AreEqual("2016-12-31 1 PM", DateMath.Parse(input, "yyyy-MM-dd h tt"));
+            Assert.AreEqual("2017-01-01 12 AM", DateMath.Parse(input + "+11h", "yyyy-MM-dd h tt"));
+            Assert.AreEqual("2017-12-31 23:59:59", DateMath.Parse(input + "-13h+1y+1d-1s", "yyyy-MM-dd HH:mm:ss"));
+
+        }
+
     }
 }

@@ -24,10 +24,10 @@ namespace dalenewman {
     public static class DateMath {
 
 #if NS10
-        private static readonly Regex AnchorDate = new Regex(@"^now|[\d\-]{6,}\|\|");
+        private static readonly Regex AnchorDate = new Regex(@"^now|.{6,}\|\|");
         private static readonly Regex Operator = new Regex(@"[/+/-]{1}\d+[yMwdhHms]{1}");
 #else
-        private static readonly Regex AnchorDate = new Regex(@"^now|[\d\-]{6,}\|\|", RegexOptions.Compiled);
+        private static readonly Regex AnchorDate = new Regex(@"^now|.{6,}\|\|", RegexOptions.Compiled);
         private static readonly Regex Operator = new Regex(@"[/+/-]{1}\d+[yMwdhHms]{1}", RegexOptions.Compiled);
 #endif
 
