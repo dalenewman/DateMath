@@ -26,13 +26,29 @@ namespace dalenewman {
         private static readonly Regex AnchorDate = new Regex(@"^now|[\d\-]{6,}\|\|");
         private static readonly Regex Operator = new Regex(@"[/+/-]{1}\d+[yMwdhHms]{1}");
 
-        public static string Parse(string expression, string format = "yyyy-MM-dd") {
+        public static string Parse(string expression, string format) {
             string result;
             TryParse(expression, out result, format);
             return result;
         }
 
-        public static bool TryParse(string expression, out string result, string format = "yyyy-MM-dd") {
+        public static DateTime Parse(string expression) {
+            DateTime result;
+            TryParse(expression, out result);
+            return result;
+        }
+
+        public static bool TryParse(string expression, out string result, string format) {
+            DateTime date;
+            if (TryParse(expression, out date)) {
+                result = date.ToString(format);
+                return true;
+            }
+            result = expression;
+            return false;
+        }
+
+        public static bool TryParse(string expression, out DateTime result) {
 
             // try get anchor date
             var matchAnchorDate = AnchorDate.Match(expression);
@@ -48,7 +64,7 @@ namespace dalenewman {
                 } else {
                     value = value.TrimEnd(new[] { '|' });
                     if (!DateTime.TryParse(value, out date)) {
-                        result = expression;
+                        result = DateTime.MinValue;
                         return false;
                     }
                     operators = expression.Substring(matchAnchorDate.Value.Length);
@@ -56,12 +72,11 @@ namespace dalenewman {
 
                 date = Operator.Matches(operators).Cast<Match>().Aggregate(date, (current, match) => ApplyOperator(current, match.Value));
 
-                result = date.ToString(format);
+                result = date;
                 return true;
             }
 
-
-            result = expression;
+            result = DateTime.MinValue;
             return false;
         }
 
