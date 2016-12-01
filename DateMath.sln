@@ -13,30 +13,53 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DateMath", "src\DateMath\DateMath.xproj", "{D943B3F1-D410-4F11-B633-5BEF6D8C1F9B}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "src\Testing\Testing.csproj", "{FCA0AE0B-F4D7-41B7-BC2E-B3BC4286F13A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateMath", "src\DateMath\DateMath.csproj", "{2C0E60FF-959A-4238-85D2-ED4C30CB1FDE}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Shared", "src\Shared\Shared.shproj", "{20D2E708-D4D3-4CD5-8CAD-3AC7AC5E951B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateMath40", "src\DateMath40\DateMath40.csproj", "{FB79DB43-334B-473A-A5D1-DB47B5CA99FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateMath45", "src\DateMath45\DateMath45.csproj", "{C8994B81-94E9-4556-8637-FA52AB83E784}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		src\Shared\Shared.projitems*{20d2e708-d4d3-4cd5-8cad-3ac7ac5e951b}*SharedItemsImports = 13
+		src\Shared\Shared.projitems*{2c0e60ff-959a-4238-85d2-ed4c30cb1fde}*SharedItemsImports = 4
+		src\Shared\Shared.projitems*{c8994b81-94e9-4556-8637-fa52ab83e784}*SharedItemsImports = 4
+		src\Shared\Shared.projitems*{fb79db43-334b-473a-a5d1-db47b5ca99fd}*SharedItemsImports = 4
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D943B3F1-D410-4F11-B633-5BEF6D8C1F9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D943B3F1-D410-4F11-B633-5BEF6D8C1F9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D943B3F1-D410-4F11-B633-5BEF6D8C1F9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D943B3F1-D410-4F11-B633-5BEF6D8C1F9B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FCA0AE0B-F4D7-41B7-BC2E-B3BC4286F13A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FCA0AE0B-F4D7-41B7-BC2E-B3BC4286F13A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCA0AE0B-F4D7-41B7-BC2E-B3BC4286F13A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCA0AE0B-F4D7-41B7-BC2E-B3BC4286F13A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C0E60FF-959A-4238-85D2-ED4C30CB1FDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C0E60FF-959A-4238-85D2-ED4C30CB1FDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C0E60FF-959A-4238-85D2-ED4C30CB1FDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C0E60FF-959A-4238-85D2-ED4C30CB1FDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB79DB43-334B-473A-A5D1-DB47B5CA99FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB79DB43-334B-473A-A5D1-DB47B5CA99FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB79DB43-334B-473A-A5D1-DB47B5CA99FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB79DB43-334B-473A-A5D1-DB47B5CA99FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8994B81-94E9-4556-8637-FA52AB83E784}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8994B81-94E9-4556-8637-FA52AB83E784}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8994B81-94E9-4556-8637-FA52AB83E784}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8994B81-94E9-4556-8637-FA52AB83E784}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{D943B3F1-D410-4F11-B633-5BEF6D8C1F9B} = {1776B3B6-23B5-47A8-B005-7B6275BEB4D6}
 		{FCA0AE0B-F4D7-41B7-BC2E-B3BC4286F13A} = {1776B3B6-23B5-47A8-B005-7B6275BEB4D6}
+		{2C0E60FF-959A-4238-85D2-ED4C30CB1FDE} = {1776B3B6-23B5-47A8-B005-7B6275BEB4D6}
+		{20D2E708-D4D3-4CD5-8CAD-3AC7AC5E951B} = {1776B3B6-23B5-47A8-B005-7B6275BEB4D6}
+		{FB79DB43-334B-473A-A5D1-DB47B5CA99FD} = {1776B3B6-23B5-47A8-B005-7B6275BEB4D6}
+		{C8994B81-94E9-4556-8637-FA52AB83E784} = {1776B3B6-23B5-47A8-B005-7B6275BEB4D6}
 	EndGlobalSection
 EndGlobal

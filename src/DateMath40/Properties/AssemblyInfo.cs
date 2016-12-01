@@ -6,15 +6,22 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("DateMath")]
-[assembly: AssemblyDescription("Date Math in .NET")]
+[assembly: AssemblyTitle("DateMath40")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("DateMath")]
+[assembly: AssemblyProduct("DateMath40")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: NeutralResourcesLanguage("en")]
+
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+[assembly: ComVisible(false)]
+
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+[assembly: Guid("fb79db43-334b-473a-a5d1-db47b5ca99fd")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -28,3 +35,5 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("0.0.3.0")]
 [assembly: AssemblyFileVersion("0.0.3.0")]
+[assembly: NeutralResourcesLanguage("en-US")]
+

@@ -35,9 +35,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DateMath">
-      <HintPath>..\DateMath\bin\Debug\netstandard1.0\DateMath.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -55,6 +52,12 @@
   <ItemGroup>
     <Compile Include="All.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DateMath\DateMath.csproj">
+      <Project>{2c0e60ff-959a-4238-85d2-ed4c30cb1fde}</Project>
+      <Name>DateMath</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

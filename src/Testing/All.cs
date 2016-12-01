@@ -16,15 +16,15 @@
 // limitations under the License.
 #endregion
 using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using dalenewman;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Testing {
 
     [TestClass]
     public class All {
 
-        /* Caution: These might not all pass, all the time, because time is a fickle thing. */
+        /* Caution: These might not all pass, all the time, because time passes. */
 
         public static string Format = "yyyy-MM-dd";
         public static string FormatWithTime = "yyyy-MM-dd HH:mm:ss";
