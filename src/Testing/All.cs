@@ -129,5 +129,12 @@ namespace Testing {
             Assert.AreEqual(expected, actual);
         }
 
+        [TestMethod]
+        public void TestOutOfOrder() {
+            var expected = DateTime.UtcNow.AddDays(1.0).AddMinutes(1.0).AddSeconds(1.0);
+            var actual = DateMath.Parse("now+1d+1s+1m");
+            Assert.AreEqual(expected.ToString(FormatWithTime), actual.ToString(FormatWithTime));
+        }
+
     }
 }
