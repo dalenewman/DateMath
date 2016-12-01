@@ -1,6 +1,6 @@
 ### DateMath
 
-This is a .NET library for parsing "date math" (as see in [elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/common-options.html#date-math)).
+This is a .NET library for parsing "date math" (as seen in [elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/common-options.html#date-math)).
 
 It is available on [Nuget](https://www.nuget.org/packages/DateMath) with id `DateMath`:
 
