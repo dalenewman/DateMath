@@ -22,15 +22,15 @@ using dalenewman;
 namespace Testing {
 
     [TestClass]
-    public class All
-    {
+    public class All {
+
+        /* Caution: These might not all pass, all the time, because time is a fickle thing. */
 
         public static string Format = "yyyy-MM-dd";
         public static string FormatWithTime = "yyyy-MM-dd HH:mm:ss";
 
         [TestMethod]
-        public void TestNow()
-        {
+        public void TestNow() {
             var expected = DateTime.UtcNow.ToString(Format);
             var actual = DateMath.Parse("now", Format);
             Assert.AreEqual(expected, actual);
@@ -45,8 +45,14 @@ namespace Testing {
         }
 
         [TestMethod]
-        public void TestAGoodDate()
-        {
+        public void TestAddToNowWithARealDateTime() {
+            var expected = DateTime.UtcNow.AddDays(3.0).AddHours(7.0);
+            var actual = DateMath.Parse("now+3d+7h");
+            Assert.AreEqual(expected.ToString(FormatWithTime), actual.ToString(FormatWithTime));
+        }
+
+        [TestMethod]
+        public void TestAGoodDate() {
             const string expected = "2016-11-01";
             var actual = DateMath.Parse("2016-11-01||", Format);
             Assert.AreEqual(expected, actual);
