@@ -1,9 +1,9 @@
 {
   "title": "Date Math",
   "copyright": "Dale Newman © 2016",
-  "description": "Elasticsearch date math in .NET",
+  "description": "Date Math in .NET",
   "language": "en-US",
-  "version": "0.0.1-*",
+  "version": "0.0.2-*",
 
   "dependencies": {
     "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
