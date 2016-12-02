@@ -13,7 +13,7 @@ Let `now` be `2016-12-31 1 PM`:
 DateMath.Parse("now","yyyy-MM-dd h tt"); // 2016-12-31 1 PM
 DateMath.Parse("now+11h", "yyyy-MM-dd h tt"); // 2017-01-01 12 AM
 DateMath.Parse("now-13h+1y+1d-1s", "yyyy-MM-dd HH:mm:ss"); // 2017-12-31 23:59:59
-DateMath.Parse("now||/d", "yyyy-MM-dd HH:mm:ss.fff"); // 2016-12-31 00:00:00.000
+DateMath.Parse("now/d", "yyyy-MM-dd HH:mm:ss.fff"); // 2016-12-31 00:00:00.000
 ```
 See [tests](https://github.com/dalenewman/DateMath/blob/master/src/Testing/All.cs) for other usage.
 
@@ -36,8 +36,13 @@ report parameters, e.g:
             <td>now</td>
         </tr>
         <tr>
-            <td>the last month</td>
-            <td>now-1M</td>
+            <td>month to date</td>
+            <td>now/M</td>
+            <td>now</td>
+        </tr>
+        <tr>
+            <td>year to date</td>
+            <td>now/y</td>
             <td>now</td>
         </tr>
         <tr>

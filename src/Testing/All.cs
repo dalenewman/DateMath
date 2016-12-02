@@ -143,7 +143,6 @@ namespace Testing {
             Assert.AreEqual("2017-01-01 12 AM", DateMath.Parse(input + "+11h", "yyyy-MM-dd h tt"));
             Assert.AreEqual("2017-12-31 23:59:59", DateMath.Parse(input + "-13h+1y+1d-1s", "yyyy-MM-dd HH:mm:ss"));
             Assert.AreEqual("2016-12-31 00:00:00.000", DateMath.Parse(input + "/d", "yyyy-MM-dd HH:mm:ss.fff"));
-
         }
 
         [TestMethod]
