@@ -2,15 +2,15 @@
 <package >
   <metadata>
     <id>DateMath</id>
-    <version>0.0.4-beta</version>
+    <version>0.0.5-beta</version>
     <title>Date Math</title>
     <authors>Dale Newman</authors>
     <owners>Dale Newman</owners>
     <licenseUrl>https://github.com/dalenewman/DateMath/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/dalenewman/DateMath</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes>Added support for date rounding (down).</releaseNotes>
     <description>Date Math in .NET</description>
-    <releaseNotes>Initial Release</releaseNotes>
     <copyright>Copyright © 2016</copyright>
     <tags>date math datemath</tags>
     <dependencies>

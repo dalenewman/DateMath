@@ -24,14 +24,17 @@ namespace dalenewman {
     public static class DateMath {
 
         private const string AnchorDatePattern = @"^now|.{6,}\|\|";
-        private const string OperatorPattern = @"[/+/-]{1}\d+[yMwdhHms]{1}";
+        private const string OperatorPattern = @"[/+/-]{1}\d+[dhMmswy]{1}";
+        private const string RoundingPattern = @"/[dhMmswy]{1}";
 
 #if NS10
         private static readonly Regex AnchorDate = new Regex(AnchorDatePattern);
         private static readonly Regex Operator = new Regex(OperatorPattern);
+        private static readonly Regex Rounding = new Regex(RoundingPattern);
 #else
         private static readonly Regex AnchorDate = new Regex(AnchorDatePattern, RegexOptions.Compiled);
         private static readonly Regex Operator = new Regex(OperatorPattern, RegexOptions.Compiled);
+        private static readonly Regex Rounding = new Regex(RoundingPattern, RegexOptions.Compiled);
 #endif
 
         public static string Parse(string expression, string format) {
@@ -58,7 +61,6 @@ namespace dalenewman {
 
         public static bool TryParse(string expression, out DateTime result) {
 
-            // try get anchor date
             var matchAnchorDate = AnchorDate.Match(expression);
             if (matchAnchorDate.Success) {
                 string operators;
@@ -80,6 +82,11 @@ namespace dalenewman {
 
                 date = Operator.Matches(operators).Cast<Match>().Aggregate(date, (current, match) => ApplyOperator(current, match.Value));
 
+                var matchRounder = Rounding.Match(operators);
+                if (matchRounder.Success) {
+                    date = ApplyRounding(date, matchRounder.Value[1]);
+                }
+
                 result = date;
                 return true;
             }
@@ -88,47 +95,56 @@ namespace dalenewman {
             return false;
         }
 
+        private static TimeSpan UnitToInterval(DateTime input, char unit) {
+            var daysInYear = DateTime.IsLeapYear(input.Year) && input < new DateTime(input.Year, 2, 29) ? 366 : 365;
+            switch (unit) {
+                case 'y': // year
+                    return new TimeSpan(daysInYear, 0, 0, 0);
+                case 'M': // month
+                    return new TimeSpan(daysInYear / 12, 0, 0, 0);
+                case 'w': // week
+                    return new TimeSpan(7, 0, 0, 0);
+                case 'd': // day
+                    return new TimeSpan(1, 0, 0, 0);
+                case 'h':// hour
+                    return new TimeSpan(0, 1, 0, 0);
+                case 'm': // minute
+                    return new TimeSpan(0, 0, 1, 0);
+                default: // second
+                    return new TimeSpan(0, 0, 0, 1);
+            }
+        }
+
         private static DateTime ApplyOperator(DateTime input, string @operator) {
 
             var numberPart = @operator.Substring(1, @operator.Length - 2);
             var number = int.Parse(numberPart);
-            var daysInYear = DateTime.IsLeapYear(input.Year) && input < new DateTime(input.Year, 2, 29) ? 366 : 365;
             var add = @operator[0] == '+';
             var unit = @operator[@operator.Length - 1];
-
-            TimeSpan timeSpan;
-            //yMwdhHms
-
-            switch (unit) {
-                case 'y': // year
-                    timeSpan = new TimeSpan(daysInYear, 0, 0, 0);
-                    break;
-                case 'M': // month
-                    timeSpan = new TimeSpan(daysInYear / 12, 0, 0, 0);
-                    break;
-                case 'w': // week
-                    timeSpan = new TimeSpan(7, 0, 0, 0);
-                    break;
-                case 'd': // day
-                    timeSpan = new TimeSpan(1, 0, 0, 0);
-                    break;
-                case 'h':// hour
-                case 'H':
-                    timeSpan = new TimeSpan(0, 1, 0, 0);
-                    break;
-                case 'm': // minute
-                    timeSpan = new TimeSpan(0, 0, 1, 0);
-                    break;
-                default: // second
-                    timeSpan = new TimeSpan(0, 0, 0, 1);
-                    break;
-            }
+            var interval = UnitToInterval(input, unit);
 
             if (number > 1) {
-                timeSpan = new TimeSpan(number * timeSpan.Ticks);
+                interval = new TimeSpan(number * interval.Ticks);
             }
 
-            return add ? input.Add(timeSpan) : input.Subtract(timeSpan);
+            return add ? input.Add(interval) : input.Subtract(interval);
+
+        }
+
+        private static DateTime Floor(DateTime input, TimeSpan interval) {
+            return input.AddTicks(-(input.Ticks % interval.Ticks));
+        }
+
+
+        private static DateTime ApplyRounding(DateTime input, char unit) {
+            switch (unit) {
+                case 'y':
+                    return new DateTime(input.Year, 1, 1);
+                case 'M':
+                    return new DateTime(input.Year, input.Month, 1);
+                default:
+                    return Floor(input, UnitToInterval(input, unit));
+            }
 
         }
     }

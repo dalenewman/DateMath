@@ -145,5 +145,35 @@ namespace Testing {
 
         }
 
+        [TestMethod]
+        public void TestRoundDownToYear() {
+            Assert.AreEqual("2016-01-01 00:00:00.000", DateMath.Parse("2016-12-15 13:14||/y", "yyyy-MM-dd HH:mm:ss.fff"));
+        }
+
+        [TestMethod]
+        public void TestRoundDownToMonth() {
+            Assert.AreEqual("2016-12-01 00:00", DateMath.Parse("2016-12-15 13:14||/M", "yyyy-MM-dd HH:mm"));
+        }
+
+        [TestMethod]
+        public void TestRoundDownToDay() {
+            Assert.AreEqual("2016-12-31 12 AM", DateMath.Parse("2016-12-31 1 PM||/d", "yyyy-MM-dd h tt"));
+        }
+
+        [TestMethod]
+        public void TestRoundDownToHour() {
+            Assert.AreEqual("2016-12-31 1:00 PM", DateMath.Parse("2016-12-31 1:31 PM||/h", "yyyy-MM-dd h:mm tt"));
+        }
+
+        [TestMethod]
+        public void TestRoundDownToMinute() {
+            Assert.AreEqual("2016-12-31 1:31:00 PM", DateMath.Parse("2016-12-31 1:31:31 PM||/m", "yyyy-MM-dd h:mm:ss tt"));
+        }
+
+        [TestMethod]
+        public void TestRoundDownToSecond() {
+            Assert.AreEqual("2016-12-31 1:31:31.000 PM", DateMath.Parse("2016-12-31 1:31:31.999 PM||/s", "yyyy-MM-dd h:mm:ss.fff tt"));
+        }
+
     }
 }
