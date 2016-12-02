@@ -2,14 +2,14 @@
 <package >
   <metadata>
     <id>DateMath</id>
-    <version>0.0.5-beta</version>
+    <version>0.1.0-beta</version>
     <title>Date Math</title>
     <authors>Dale Newman</authors>
     <owners>Dale Newman</owners>
     <licenseUrl>https://github.com/dalenewman/DateMath/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/dalenewman/DateMath</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <releaseNotes>Added support for date rounding (down).</releaseNotes>
+    <releaseNotes>Changed namespace from dalenewman to DaleNewman (pascal case)</releaseNotes>
     <description>Date Math in .NET</description>
     <copyright>Copyright © 2016</copyright>
     <tags>date math datemath</tags>

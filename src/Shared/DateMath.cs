@@ -19,7 +19,7 @@ using System;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace dalenewman {
+namespace DaleNewman {
 
     public static class DateMath {
 

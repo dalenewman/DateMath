@@ -16,7 +16,7 @@
 // limitations under the License.
 #endregion
 using System;
-using dalenewman;
+using DaleNewman;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Testing {

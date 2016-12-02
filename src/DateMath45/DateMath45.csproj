@@ -7,7 +7,7 @@
     <ProjectGuid>{C8994B81-94E9-4556-8637-FA52AB83E784}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>dalenewman</RootNamespace>
+    <RootNamespace>DaleNewman</RootNamespace>
     <AssemblyName>DateMath</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
