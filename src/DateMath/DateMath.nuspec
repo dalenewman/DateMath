@@ -2,14 +2,14 @@
 <package >
   <metadata>
     <id>DateMath</id>
-    <version>0.1.0-beta</version>
+    <version>0.2.0-beta</version>
     <title>Date Math</title>
     <authors>Dale Newman</authors>
     <owners>Dale Newman</owners>
     <licenseUrl>https://github.com/dalenewman/DateMath/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/dalenewman/DateMath</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <releaseNotes>Changed namespace from dalenewman to DaleNewman (pascal case)</releaseNotes>
+    <releaseNotes>Exposed DateMath.Apply for apply "math" to pre-existing dates. Added support for .NET2 (removing LINQ dependency). Removed unused dependencies.</releaseNotes>
     <description>Date Math in .NET</description>
     <copyright>Copyright © 2016</copyright>
     <tags>date math datemath</tags>
@@ -18,6 +18,7 @@
         <dependency id="NETStandard.Library" version="1.6.0" />
       </group>
       <group targetFramework="portable-net45+win8+wpa81+wp8" />
+      <group targetFramework="net20" />
       <group targetFramework="net40" />
       <group targetFramework="net45" />
     </dependencies>
@@ -25,6 +26,7 @@
   <files>
     <file src="bin\Release\netstandard1.0\DateMath.dll" target="lib\netstandard1.0\DateMath.dll" />
     <file src="bin\Release\netstandard1.0\DateMath.dll" target="lib\portable-net45+win8+wpa81+wp8\DateMath.dll" />
+    <file src="c:\Code\DateMath\src\DateMath20\bin\Release\DateMath.dll" target="lib\net20\DateMath.dll" />
     <file src="c:\Code\DateMath\src\DateMath40\bin\Release\DateMath.dll" target="lib\net40\DateMath.dll" />
     <file src="c:\Code\DateMath\src\DateMath45\bin\Release\DateMath.dll" target="lib\net45\DateMath.dll" />
   </files>

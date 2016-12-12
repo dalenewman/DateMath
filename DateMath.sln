@@ -23,10 +23,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateMath40", "src\DateMath4
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateMath45", "src\DateMath45\DateMath45.csproj", "{C8994B81-94E9-4556-8637-FA52AB83E784}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateMath20", "src\DateMath20\DateMath20.csproj", "{C18116A1-382D-45E1-862B-F41F39E22F2B}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		src\Shared\Shared.projitems*{20d2e708-d4d3-4cd5-8cad-3ac7ac5e951b}*SharedItemsImports = 13
 		src\Shared\Shared.projitems*{2c0e60ff-959a-4238-85d2-ed4c30cb1fde}*SharedItemsImports = 4
+		src\Shared\Shared.projitems*{c18116a1-382d-45e1-862b-f41f39e22f2b}*SharedItemsImports = 4
 		src\Shared\Shared.projitems*{c8994b81-94e9-4556-8637-fa52ab83e784}*SharedItemsImports = 4
 		src\Shared\Shared.projitems*{fb79db43-334b-473a-a5d1-db47b5ca99fd}*SharedItemsImports = 4
 	EndGlobalSection
@@ -51,6 +54,10 @@ Global
 		{C8994B81-94E9-4556-8637-FA52AB83E784}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8994B81-94E9-4556-8637-FA52AB83E784}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8994B81-94E9-4556-8637-FA52AB83E784}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C18116A1-382D-45E1-862B-F41F39E22F2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C18116A1-382D-45E1-862B-F41F39E22F2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C18116A1-382D-45E1-862B-F41F39E22F2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C18116A1-382D-45E1-862B-F41F39E22F2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,5 +68,6 @@ Global
 		{20D2E708-D4D3-4CD5-8CAD-3AC7AC5E951B} = {1776B3B6-23B5-47A8-B005-7B6275BEB4D6}
 		{FB79DB43-334B-473A-A5D1-DB47B5CA99FD} = {1776B3B6-23B5-47A8-B005-7B6275BEB4D6}
 		{C8994B81-94E9-4556-8637-FA52AB83E784} = {1776B3B6-23B5-47A8-B005-7B6275BEB4D6}
+		{C18116A1-382D-45E1-862B-F41F39E22F2B} = {1776B3B6-23B5-47A8-B005-7B6275BEB4D6}
 	EndGlobalSection
 EndGlobal

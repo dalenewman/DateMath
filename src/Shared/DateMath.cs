@@ -16,7 +16,6 @@
 // limitations under the License.
 #endregion
 using System;
-using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace DaleNewman {
@@ -80,14 +79,7 @@ namespace DaleNewman {
                     operators = expression.Substring(matchAnchorDate.Value.Length);
                 }
 
-                date = Operator.Matches(operators).Cast<Match>().Aggregate(date, (current, match) => ApplyOperator(current, match.Value));
-
-                var matchRounder = Rounding.Match(operators);
-                if (matchRounder.Success) {
-                    date = ApplyRounding(date, matchRounder.Value[1]);
-                }
-
-                result = date;
+                result = Apply(date, operators);
                 return true;
             }
 
@@ -146,6 +138,18 @@ namespace DaleNewman {
                     return Floor(input, UnitToInterval(input, unit));
             }
 
+        }
+
+        public static DateTime Apply(DateTime input, string math) {
+            foreach (Match match in Operator.Matches(math)) {
+                input = ApplyOperator(input, match.Value);
+            }
+
+            var matchRounder = Rounding.Match(math);
+            if (matchRounder.Success) {
+                input = ApplyRounding(input, matchRounder.Value[1]);
+            }
+            return input;
         }
     }
 }
