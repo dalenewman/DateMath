@@ -2,14 +2,14 @@
 <package >
   <metadata>
     <id>DateMath</id>
-    <version>0.2.0-beta</version>
+    <version>1.0.0</version>
     <title>Date Math</title>
     <authors>Dale Newman</authors>
     <owners>Dale Newman</owners>
     <licenseUrl>https://github.com/dalenewman/DateMath/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/dalenewman/DateMath</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <releaseNotes>Exposed DateMath.Apply for apply "math" to pre-existing dates. Added support for .NET2 (removing LINQ dependency). Removed unused dependencies.</releaseNotes>
+    <releaseNotes>Moved out of pre-release.</releaseNotes>
     <description>Date Math in .NET</description>
     <copyright>Copyright © 2016</copyright>
     <tags>date math datemath</tags>

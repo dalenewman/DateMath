@@ -1,7 +1,7 @@
 ### Date Math
 
 [![Build status](https://ci.appveyor.com/api/projects/status/0f7vppj64aogn4ao?svg=true)](https://ci.appveyor.com/project/dalenewman/datemath)
-[![NuGet Pre Release](https://img.shields.io/nuget/vpre/DateMath.svg)](https://www.nuget.org/packages/DateMath)
+[![NuGet](https://img.shields.io/nuget/v/DateMath.svg)](https://www.nuget.org/packages/DateMath)
 
 This is a .NET library for parsing "date math" as seen in Elasticsearch.
 To find out more about date math, read [this](https://www.elastic.co/guide/en/elasticsearch/reference/current/common-options.html#date-math) and [this](https://www.elastic.co/guide/en/elasticsearch/client/net-api/current/date-math-expressions.html).
