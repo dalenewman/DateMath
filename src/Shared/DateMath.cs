@@ -37,20 +37,17 @@ namespace DaleNewman {
 #endif
 
         public static string Parse(string expression, string format) {
-            string result;
-            TryParse(expression, out result, format);
+            TryParse(expression, out var result, format);
             return result;
         }
 
         public static DateTime Parse(string expression) {
-            DateTime result;
-            TryParse(expression, out result);
+            TryParse(expression, out var result);
             return result;
         }
 
         public static bool TryParse(string expression, out string result, string format) {
-            DateTime date;
-            if (TryParse(expression, out date)) {
+            if (TryParse(expression, out var date)) {
                 result = date.ToString(format);
                 return true;
             }
