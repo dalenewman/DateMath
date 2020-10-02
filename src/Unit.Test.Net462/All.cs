@@ -63,11 +63,35 @@ namespace Unit.Test.Net462
       }
 
       [TestMethod]
-      public void TestAddMonth()
+      public void TestAddMonthWhenMonthsHas30Days()
       {
          const string expected = "2016-12-01";
          var actual = DateMath.Parse("2016-11-01||+1M", Format);
          Assert.AreEqual(expected, actual);
+      }
+
+      [TestMethod]
+      public void TestAddMonthWhenMonthHas31Days()
+      {
+          const string expected = "2016-11-01";
+          var actual = DateMath.Parse("2016-10-01||+1M", Format);
+          Assert.AreEqual(expected, actual);
+      }
+
+      [TestMethod]
+      public void TestAddMonthWhenMonthHas28Days()
+      {
+          const string expected = "2015-03-01";
+          var actual = DateMath.Parse("2015-02-01||+1M", Format);
+          Assert.AreEqual(expected, actual);
+      }
+
+      [TestMethod]
+      public void TestAddMonthWhenMonthHas29Days()
+      {
+          const string expected = "2016-03-01";
+          var actual = DateMath.Parse("2016-02-01||+1M", Format);
+          Assert.AreEqual(expected, actual);
       }
 
 
