@@ -86,11 +86,8 @@ namespace DaleNewman {
 
         private static TimeSpan UnitToInterval(DateTime input, char unit) {
             var daysInYear = DateTime.IsLeapYear(input.Year) && input < new DateTime(input.Year, 2, 29) ? 366 : 365;
+
             switch (unit) {
-                case 'y': // year
-                    return new TimeSpan(daysInYear, 0, 0, 0);
-                case 'M': // month
-                    return new TimeSpan(daysInYear / 12, 0, 0, 0);
                 case 'w': // week
                     return new TimeSpan(7, 0, 0, 0);
                 case 'd': // day
@@ -110,8 +107,17 @@ namespace DaleNewman {
             var number = int.Parse(numberPart);
             var add = @operator[0] == '+';
             var unit = @operator[@operator.Length - 1];
-            var interval = UnitToInterval(input, unit);
 
+            if (unit == 'y')
+            {
+                return input.AddYears(add ? number : number * -1);
+            }
+            if (unit == 'M')
+            {
+                return input.AddMonths(add ? number : -1 * number);
+            }
+
+            var interval = UnitToInterval(input, unit);
             if (number > 1) {
                 interval = new TimeSpan(number * interval.Ticks);
             }
