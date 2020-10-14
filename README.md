@@ -69,7 +69,7 @@ var newYears = DateMath.Apply(date, "+1d/y");
 ```
 
 
-See [tests](https://github.com/dalenewman/DateMath/blob/master/src/Testing/All.cs) for other usage.
+See [tests](https://github.com/dalenewman/DateMath/blob/master/src/Unit.Test.NetCore/All.cs) for other usage.
 
 
 

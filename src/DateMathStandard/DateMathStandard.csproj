@@ -4,8 +4,8 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>DateMath</AssemblyName>
     <RootNamespace>DaleNewman</RootNamespace>
-    <Version>1.1.0</Version>
-    <Copyright>Copyright 2016-2019 Dale Newman</Copyright>
+    <Version>1.2.0</Version>
+    <Copyright>Copyright 2016-2020 Dale Newman</Copyright>
     <NeutralLanguage>English</NeutralLanguage>
     <PackageProjectUrl>https://github.com/dalenewman/DateMath</PackageProjectUrl>
     <RepositoryUrl>https://github.com/dalenewman/DateMath.git</RepositoryUrl>

@@ -10,6 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.gitignore = .gitignore
 		appveyor.yml = appveyor.yml
 		DateMath.nuspec = DateMath.nuspec
+		LICENSE.md = LICENSE.md
 		nuget.bat = nuget.bat
 		README.md = README.md
 	EndProjectSection
@@ -38,6 +39,7 @@ Global
 		src\Shared\Shared.projitems*{2c0e60ff-959a-4238-85d2-ed4c30cb1fde}*SharedItemsImports = 4
 		src\Shared\Shared.projitems*{c18116a1-382d-45e1-862b-f41f39e22f2b}*SharedItemsImports = 4
 		src\Shared\Shared.projitems*{c8994b81-94e9-4556-8637-fa52ab83e784}*SharedItemsImports = 4
+		src\Shared\Shared.projitems*{f8f8dccb-a234-41ba-9678-a6aef659ac02}*SharedItemsImports = 5
 		src\Shared\Shared.projitems*{f9a51f84-1295-4060-82db-ee60ded1c49a}*SharedItemsImports = 4
 		src\Shared\Shared.projitems*{fb79db43-334b-473a-a5d1-db47b5ca99fd}*SharedItemsImports = 4
 	EndGlobalSection
