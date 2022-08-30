@@ -1,7 +1,7 @@
 ﻿#region license
 // DateMath
 // Date Math for .NET
-// Copyright 2016 Dale Newman
+// Copyright 2016-2022 Dale Newman
 //  
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -26,15 +26,9 @@ namespace DaleNewman {
         private const string OperatorPattern = @"[/+/-]{1}\d+[dhMmswy]{1}";
         private const string RoundingPattern = @"/[dhMmswy]{1}";
 
-#if NS10
-        private static readonly Regex AnchorDate = new Regex(AnchorDatePattern);
-        private static readonly Regex Operator = new Regex(OperatorPattern);
-        private static readonly Regex Rounding = new Regex(RoundingPattern);
-#else
         private static readonly Regex AnchorDate = new Regex(AnchorDatePattern, RegexOptions.Compiled);
         private static readonly Regex Operator = new Regex(OperatorPattern, RegexOptions.Compiled);
         private static readonly Regex Rounding = new Regex(RoundingPattern, RegexOptions.Compiled);
-#endif
 
         public static string Parse(string expression, string format) {
             TryParse(expression, out var result, format);

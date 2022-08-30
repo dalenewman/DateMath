@@ -4,13 +4,15 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>DateMath</AssemblyName>
     <RootNamespace>DaleNewman</RootNamespace>
-    <Version>1.2.0</Version>
+    <Version>1.3.0</Version>
     <Copyright>Copyright 2016-2020 Dale Newman</Copyright>
     <NeutralLanguage>English</NeutralLanguage>
     <PackageProjectUrl>https://github.com/dalenewman/DateMath</PackageProjectUrl>
     <RepositoryUrl>https://github.com/dalenewman/DateMath.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <FileVersion>1.3.0</FileVersion>
+    <AssemblyVersion>1.3.0</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>

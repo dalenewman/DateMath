@@ -1,8 +1,8 @@
-﻿using System;
-using DaleNewman;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+using DaleNewman;
 
-namespace Unit.Test.Net462
+namespace Test.Unit.Core
 {
     [TestClass]
     public class All
@@ -57,8 +57,8 @@ namespace Unit.Test.Net462
         [TestMethod]
         public void TestAddYear()
         {
-            const string expected = "2017-12-01";
-            var actual = DateMath.Parse("2016-12-01||+1y", Format);
+            const string expected = "2016-12-01";
+            var actual = DateMath.Parse("2015-12-01||+1y", Format);
             Assert.AreEqual(expected, actual);
         }
 
@@ -101,6 +101,7 @@ namespace Unit.Test.Net462
             var actual = DateMath.Parse("2017-12-01||-2y", Format);
             Assert.AreEqual(expected, actual);
         }
+
 
         [TestMethod]
         public void TestSubtractMonthWhenMonthsHas30Days()

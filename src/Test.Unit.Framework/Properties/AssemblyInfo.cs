@@ -2,19 +2,19 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("Unit.Test.Net462")]
+[assembly: AssemblyTitle("Test.Unit.Framework")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Unit.Test.Net462")]
-[assembly: AssemblyCopyright("Copyright ©  2019-2020")]
+[assembly: AssemblyProduct("Test.Unit.Framework")]
+[assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
 [assembly: ComVisible(false)]
 
-[assembly: Guid("108949ea-7d81-4e19-bb14-e74941b5ba0a")]
+[assembly: Guid("ae67bf2f-a5b9-4a28-bb9f-b21a5af33bba")]
 
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.2.0.0")]
-[assembly: AssemblyFileVersion("1.2.0.0")]
+[assembly: AssemblyVersion("1.3.0.0")]
+[assembly: AssemblyFileVersion("1.3.0.0")]
