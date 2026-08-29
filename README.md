@@ -81,7 +81,7 @@ Common reporting ranges include:
 | Year to date | `now/y` | `now` |
 | Sliding 60-day window | `now-30d` | `now+30d` |
 
-See the [tests](https://github.com/dalenewman/DateMath/blob/master/test/DateMath.Tests/DateMathTests.cs) for more examples, the [changelog](https://github.com/dalenewman/DateMath/blob/master/CHANGELOG.md) for release history, and the [NuGet packaging guide](https://github.com/dalenewman/DateMath/blob/master/docs/nuget-packaging.md) for local release instructions.
+See the [tests](https://github.com/dalenewman/DateMath/blob/main/test/DateMath.Tests/DateMathTests.cs) for more examples, the [changelog](https://github.com/dalenewman/DateMath/blob/main/CHANGELOG.md) for release history, and the [NuGet packaging guide](https://github.com/dalenewman/DateMath/blob/main/docs/nuget-packaging.md) for local release instructions.
 
 ## Contributing
 
@@ -91,4 +91,4 @@ Issues and pull requests are welcome in the [GitHub repository](https://github.c
 dotnet test --configuration Release
 ```
 
-DateMath is licensed under the [Apache License 2.0](https://github.com/dalenewman/DateMath/blob/master/LICENSE.md).
+DateMath is licensed under the [Apache License 2.0](https://github.com/dalenewman/DateMath/blob/main/LICENSE.md).
