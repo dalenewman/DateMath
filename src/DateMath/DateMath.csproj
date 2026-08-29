@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>DateMath</AssemblyName>
+    <RootNamespace>DaleNewman</RootNamespace>
+    <NeutralLanguage>en-US</NeutralLanguage>
+
+    <PackageId>DateMath</PackageId>
+    <Version>1.3.1</Version>
+    <AssemblyVersion>1.3.0.0</AssemblyVersion>
+    <FileVersion>1.3.1.0</FileVersion>
+    <Authors>Dale Newman</Authors>
+    <Title>Date Math</Title>
+    <Description>Date math expression parsing for .NET, compatible with Elasticsearch-style expressions.</Description>
+    <Copyright>Copyright 2016-2026 Dale Newman</Copyright>
+    <PackageTags>date math datemath elasticsearch</PackageTags>
+    <PackageProjectUrl>https://github.com/dalenewman/DateMath</PackageProjectUrl>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReleaseNotes>https://github.com/dalenewman/DateMath/blob/master/CHANGELOG.md</PackageReleaseNotes>
+    <RepositoryUrl>https://github.com/dalenewman/DateMath.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="../../README.md" Pack="true" PackagePath="/" />
+  </ItemGroup>
+
+</Project>

@@ -1,27 +1,10 @@
-﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.2.32630.192
+VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1776B3B6-23B5-47A8-B005-7B6275BEB4D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateMath", "src\DateMath\DateMath.csproj", "{F8F8DCCB-A234-41BA-9678-A6AEF659AC02}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B40AEBDC-0E9D-46FD-B6FF-0049CE78ED0D}"
-	ProjectSection(SolutionItems) = preProject
-		.gitignore = .gitignore
-		appveyor.yml = appveyor.yml
-		DateMath.nuspec = DateMath.nuspec
-		LICENSE.md = LICENSE.md
-		nuget.bat = nuget.bat
-		README.md = README.md
-	EndProjectSection
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Shared", "src\Shared\Shared.shproj", "{20D2E708-D4D3-4CD5-8CAD-3AC7AC5E951B}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateMathStandard", "src\DateMathStandard\DateMathStandard.csproj", "{F8F8DCCB-A234-41BA-9678-A6AEF659AC02}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Unit.Core", "src\Test.Unit.Core\Test.Unit.Core.csproj", "{79E67BD1-63CD-429E-94E2-4BA807610599}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Unit.Framework", "src\Test.Unit.Framework\Test.Unit.Framework.csproj", "{AE67BF2F-A5B9-4A28-BB9F-B21A5AF33BBA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateMath.Tests", "test\DateMath.Tests\DateMath.Tests.csproj", "{79E67BD1-63CD-429E-94E2-4BA807610599}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,25 +20,11 @@ Global
 		{79E67BD1-63CD-429E-94E2-4BA807610599}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79E67BD1-63CD-429E-94E2-4BA807610599}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79E67BD1-63CD-429E-94E2-4BA807610599}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AE67BF2F-A5B9-4A28-BB9F-B21A5AF33BBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AE67BF2F-A5B9-4A28-BB9F-B21A5AF33BBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AE67BF2F-A5B9-4A28-BB9F-B21A5AF33BBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AE67BF2F-A5B9-4A28-BB9F-B21A5AF33BBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{20D2E708-D4D3-4CD5-8CAD-3AC7AC5E951B} = {1776B3B6-23B5-47A8-B005-7B6275BEB4D6}
-		{F8F8DCCB-A234-41BA-9678-A6AEF659AC02} = {1776B3B6-23B5-47A8-B005-7B6275BEB4D6}
-		{79E67BD1-63CD-429E-94E2-4BA807610599} = {1776B3B6-23B5-47A8-B005-7B6275BEB4D6}
-		{AE67BF2F-A5B9-4A28-BB9F-B21A5AF33BBA} = {1776B3B6-23B5-47A8-B005-7B6275BEB4D6}
-	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {094D2933-4AD2-4E54-A660-C3773059E908}
-	EndGlobalSection
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		src\Shared\Shared.projitems*{20d2e708-d4d3-4cd5-8cad-3ac7ac5e951b}*SharedItemsImports = 13
-		src\Shared\Shared.projitems*{f8f8dccb-a234-41ba-9678-a6aef659ac02}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal

@@ -1,41 +1,48 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Globalization;
 using DaleNewman;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Test.Unit.Core
+namespace DaleNewman.Tests
 {
     [TestClass]
-    public class All
+    public class DateMathTests
     {
 
-        /* Caution: These might not all pass, all the time, because time passes. */
-
-        public static string Format = "yyyy-MM-dd";
-        public static string FormatWithTime = "yyyy-MM-dd HH:mm:ss";
+        private const string Format = "yyyy-MM-dd";
+        private const string FormatWithTime = "yyyy-MM-dd HH:mm:ss";
 
         [TestMethod]
         public void TestNow()
         {
-            var expected = DateTime.UtcNow.ToString(Format);
-            var actual = DateMath.Parse("now", Format);
-            Assert.AreEqual(expected, actual);
+            var before = DateTime.UtcNow;
+            var actual = DateMath.Parse("now");
+            var after = DateTime.UtcNow;
+
+            Assert.IsTrue(actual >= before && actual <= after);
         }
 
 
         [TestMethod]
         public void TestAddToNow()
         {
-            var expected = DateTime.UtcNow.AddDays(3.0).AddHours(7.0).ToString(Format);
+            var before = DateTime.UtcNow.AddDays(3.0).AddHours(7.0);
             var actual = DateMath.Parse("now+3d+7h", Format);
-            Assert.AreEqual(expected, actual);
+            var after = DateTime.UtcNow.AddDays(3.0).AddHours(7.0);
+
+            Assert.IsTrue(
+                actual == before.ToString(Format, CultureInfo.CurrentCulture) ||
+                actual == after.ToString(Format, CultureInfo.CurrentCulture));
         }
 
         [TestMethod]
         public void TestAddToNowWithARealDateTime()
         {
-            var expected = DateTime.UtcNow.AddDays(3.0).AddHours(7.0);
+            var before = DateTime.UtcNow.AddDays(3.0).AddHours(7.0);
             var actual = DateMath.Parse("now+3d+7h");
-            Assert.AreEqual(expected.ToString(FormatWithTime), actual.ToString(FormatWithTime));
+            var after = DateTime.UtcNow.AddDays(3.0).AddHours(7.0);
+
+            Assert.IsTrue(actual >= before && actual <= after);
         }
 
         [TestMethod]
@@ -274,9 +281,11 @@ namespace Test.Unit.Core
         [TestMethod]
         public void TestOutOfOrder()
         {
-            var expected = DateTime.UtcNow.AddDays(1.0).AddMinutes(1.0).AddSeconds(1.0);
+            var before = DateTime.UtcNow.AddDays(1.0).AddMinutes(1.0).AddSeconds(1.0);
             var actual = DateMath.Parse("now+1d+1s+1m");
-            Assert.AreEqual(expected.ToString(FormatWithTime), actual.ToString(FormatWithTime));
+            var after = DateTime.UtcNow.AddDays(1.0).AddMinutes(1.0).AddSeconds(1.0);
+
+            Assert.IsTrue(actual >= before && actual <= after);
         }
 
         [TestMethod]
